@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{title}} | MiInventarioExpress</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  {{> navbar}}
+
+  <!-- Mensajes flash -->
+  <div class="container">
+    {{#if messages.success}}
+      <div class="alert alert-success">{{messages.success}}</div>
+    {{/if}}
+    {{#if messages.error}}
+      <div class="alert alert-error">{{messages.error}}</div>
+    {{/if}}
+  </div>
+
+  <!-- Contenido principal de cada vista -->
+  <main class="container">
+    {{{body}}}
+  </main>
+
+  <footer>
+    <p>MiInventarioExpress &copy; 2024 | Universidad Politécnica Salesiana</p>
+  </footer>
+
+</body>
+</html>

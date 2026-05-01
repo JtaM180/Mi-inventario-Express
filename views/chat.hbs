@@ -1,0 +1,25 @@
+<div class="chat-container">
+  <div class="chat-header">
+    <h2>💬 Chat en Tiempo Real</h2>
+    <span class="chat-user">Conectado como: <strong>{{usuario}}</strong></span>
+  </div>
+
+  <div id="mensajes" class="chat-messages">
+    <!-- Los mensajes aparecen aquí dinámicamente -->
+  </div>
+
+  <div class="chat-input-area">
+    <input type="text" id="inputMensaje"
+           placeholder="Escribe un mensaje..." class="form-control" />
+    <button id="btnEnviar" class="btn btn-primary">Enviar</button>
+  </div>
+</div>
+
+<!-- Socket.io cliente (se carga automáticamente por el servidor) -->
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/chat.js"></script>
+
+<!-- Variable con el nombre del usuario para el script -->
+<script>
+  const USUARIO_ACTUAL = "{{usuario}}";
+</script>
